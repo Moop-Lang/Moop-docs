@@ -8,6 +8,13 @@ Comprehensive documentation for the Moop programming language ecosystem.
 - **[Layered Language Guide](COMPLETE_LAYER_LANGUAGE_GUIDE.md)** - Each layer as a standalone language
 - **[Implementation Inventory](IMPLEMENTATION_INVENTORY.md)** - Complete catalog of all implementations
 
+## Theoretical Foundations (Phase 1.5)
+
+- **[Refined UME Foundation](REFINED_UME_FOUNDATION.md)** - R+Ξ and S+D duality, autopoietic-adaptive feedback
+- **[Amplituhedron Computation](AMPLITUHEDRON_COMPUTATION.md)** - Geometric optimization hypothesis
+- **[Quadruple Synergy](QUADRUPLE_SYNERGY.md)** - How homoiconicity, reversibility, amplituhedron, and autopoiesis synergize
+- **[Autopoietic-Adaptive Duality](AUTOPOIETIC_ADAPTIVE_DUALITY.md)** - Mathematics of the Ξ ↔ Ξ′ feedback loop
+
 ## Architecture
 
 - **[Layered Language Notes](LAYERED_LANGUAGE_NOTES.md)** - The crystalline waterfall architecture
