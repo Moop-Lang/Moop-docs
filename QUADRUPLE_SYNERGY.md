@@ -590,22 +590,24 @@ When divergent (Δφ > 0): time flows proportional to divergence
 
 **Analogy:** In some philosophical traditions, this mirrors concepts of timelessness (perfect synchronization) vs. temporal experience (divergence).
 
-### 6.3 Quantum-Classical Bridging
+### 6.3 Hardware Execution Model: Conventional by Default, Quantum-Ready
 
-**Mechanism:**
+**Moop runs on conventional hardware:**
 
-```
-|Ξ⟩  : Forward-evolving ket
-⟨Ξ′| : Backward-evolving bra
+All Moop implementations run on **standard CPUs** by default:
+- x86, ARM64, RISC-V, WebAssembly
+- No quantum computer required
+- Reversible operations (R) are classical bit operations
+- Reversibility means operations can be **undone**, not quantum superposition
 
-Inner product: ⟨Ξ′|Ξ⟩ = coherence measure
-```
+**Quantum-ready architecture:**
 
-**Behavior:**
-- High coherence |⟨Ξ′|Ξ⟩| ≈ 1 → Quantum-like (superposition, reversible)
-- Low coherence |⟨Ξ′|Ξ⟩| ≪ 1 → Classical-like (decoherence, irreversible)
+The same reversible substrate can **also** run on quantum hardware:
+- R operations map to quantum gates
+- Same code, different backend
+- D term represents measurement/decoherence
 
-D term (dissipation) controls the transition.
+**Key point:** Moop is **conventional by default, quantum-ready** when quantum hardware becomes available.
 
 ### 6.4 Universal Backup / Complete History
 

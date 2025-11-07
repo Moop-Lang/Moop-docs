@@ -675,17 +675,44 @@ Plus: Formal mathematical basis
 
 ---
 
-## 10. Future Directions
+## 10. Execution Models and Future Directions
 
-### 10.1 Quantum Computing Integration
+### 10.0 Execution Model: Conventional by Default, Quantum-Ready
 
-The refined UME naturally supports quantum computation:
+**Moop runs on conventional hardware by default:**
 
-- **R term:** Quantum gates (already reversible)
-- **Ξ:** Quantum state
-- **S + D:** Measurement and decoherence
+- Runs on standard CPUs: x86, ARM64, RISC-V, WebAssembly
+- No quantum computer required for any implementation
+- Reversible operations (R) are classical bit operations
+- Works on the hardware you already have
 
-**Moop's backend abstraction** (classical/simulator/quantum) directly maps to UME.
+**Quantum-ready architecture:**
+
+The reversible substrate means the **same code** can run on quantum hardware without modification:
+- R operations → quantum gates (when quantum hardware available)
+- Ξ state → quantum state representation
+- D term → measurement/decoherence
+
+**Why reversible gates on conventional hardware?**
+1. Time-travel debugging (undo execution)
+2. Safe speculation (rollback failed optimizations)
+3. Quantum-ready without requiring quantum hardware
+4. Information conservation as design principle
+
+**Example - Toffoli gate on conventional hardware:**
+```c
+// Classical implementation (runs today)
+if (control1 && control2) {
+    target = !target;  // Reversible
+}
+
+// Same operation maps to quantum hardware
+// (if/when quantum backend available)
+```
+
+**All Moop distributions:**
+- ✅ **Conventional by default** - runs on standard CPUs
+- ✅ **Quantum-ready** - same code works on quantum hardware when available
 
 ### 10.2 AI/LLM Integration
 
